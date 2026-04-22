@@ -53,6 +53,7 @@ def bjt_ic(VCE, IB, beta=150, VA=100, VCE_sat=0.2):
 VCE = np.linspace(0, 12, 500)
 IB_values = [10e-6, 20e-6, 40e-6, 60e-6, 80e-6, 100e-6]  # μA
 colors = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', '#8c564b']
+y_max_mA = 50
 
 fig, ax = plt.subplots(figsize=(10, 7))
 
@@ -63,19 +64,19 @@ for IB, color in zip(IB_values, colors):
 
 # Línea de VCE_sat
 ax.axvline(VCE_sat, color='gray', linestyle=':', alpha=0.7)
-ax.text(VCE_sat + 0.1, IC_max * 1000 * 0.95, '$V_{CE(sat)}$', color='gray', fontsize=10)
+ax.text(VCE_sat + 0.1, y_max_mA * 0.95, '$V_{CE(sat)}$', color='gray', fontsize=10)
 
 # Regiones
 ax.axvspan(0, VCE_sat, alpha=0.08, color='red', label='Saturación')
-ax.text(0.05, IC_max * 1000 * 0.5, 'Saturación', rotation=90, fontsize=9, color='red', va='center')
-ax.text(6, IC_max * 1000 * 0.85, 'Región Activa', fontsize=12, color='darkgreen',
+ax.text(0.05, y_max_mA * 0.5, 'Saturación', rotation=90, fontsize=9, color='red', va='center')
+ax.text(6, y_max_mA * 0.85, 'Región Activa', fontsize=12, color='darkgreen',
         ha='center', style='italic')
 
 ax.set_title('Familia de Curvas de Salida — BJT NPN ($\\beta = 150$)', fontsize=14)
 ax.set_xlabel('$V_{CE}$ [V]', fontsize=12)
 ax.set_ylabel('$I_C$ [mA]', fontsize=12)
 ax.set_xlim(0, 12)
-ax.set_ylim(0, IC_max * 1000 * 1.05)
+ax.set_ylim(0, y_max_mA)
 ax.grid(True, linestyle='--', alpha=0.4)
 ax.legend(loc='lower right', fontsize=9)
 plt.tight_layout()

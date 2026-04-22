@@ -5,7 +5,7 @@ topic_id: control-scripts
 file_id: Control_Scripts
 status: active
 audience: ai_context
-last_updated: 2026-03-18
+last_updated: 2026-04-17
 -->
 
 # 📋 Control de Scripts de Generación de Gráficos
@@ -332,9 +332,9 @@ last_updated: 2026-03-18
 
 | Imagen generada | Ruta | Referenciada en |
 |----------------|------|-----------------|
-| `bjt_familia_curvas_ic_vce.png` | `02-Transistor-BJT/media/generated/` | Sin referencia actual |
-| `bjt_recta_carga_dc.png` | `02-Transistor-BJT/media/generated/` | Sin referencia actual |
-| `bjt_regiones_operacion.png` | `02-Transistor-BJT/media/generated/` | Sin referencia actual |
+| `bjt_familia_curvas_ic_vce.png` | `topics/02-transistor-bjt/assets/` | [Nota3.md](../../topics/02-transistor-bjt/Notas/Nota3.md) |
+| `bjt_recta_carga_dc.png` | `topics/02-transistor-bjt/assets/` | Sin referencia actual |
+| `bjt_regiones_operacion.png` | `topics/02-transistor-bjt/assets/` | Sin referencia actual |
 
 ---
 

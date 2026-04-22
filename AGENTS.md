@@ -248,7 +248,6 @@ Solo se mejora la forma; los valores técnicos se respetan fielmente.
 
 ### 6.1 El agente NO debe:
 
-- Leer contenido interno de archivos `.py` (solo registrar rutas)
 - Cargar imágenes, binarios o archivos pesados
 - Inventar datos; usar solo valores realistas de componentes electrónicos
 - Modificar archivos en `Notas/` sin respetar que es zona sandbox
