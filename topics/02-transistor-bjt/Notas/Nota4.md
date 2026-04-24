@@ -16,7 +16,34 @@ last_updated: 2024-05-16
 
 En la figura siguiente se muestra un transistor NPN en configuración de Emisor Común (E-com), el cual está polarizado por la fuente $V_{CC}$. En esta configuración, los valores de $R_B$ y $R_C$ deben ser seleccionados tal que la caída de voltaje en $R_B$ sea más grande que la caída de voltaje en $R_C$ para asegurar que la unión Base-Colector (B-C) esté polarizada inversamente.
 
-La polarización de la unión Base-Emisor (B-E) se logra a través de $R_B$ y $V_{CC}$, estableciendo la corriente de base $I_B$. La corriente de colector $I_C$ es entonces controlada por $I_B$ ($I_C = \beta I_B$). Para que el transistor opere en la región activa (necesaria para amplificación), la unión B-E debe estar polarizada en directa y la unión B-C en inversa.
+La polarización de la unión Base-Emisor (B-E) se logra a través de $R_B$ y $V_{CC}$, estableciendo la corriente de base $I_B$. La corriente de colector $I_C$ es entonces controlada por $I_B$ ($I_C = \beta I_B$). Para que el transistor opere en la región activa (necesaria para amplificación), la unión B-E debe estar polarizada en directa y la unión B-E en inversa.
+
+### Diagrama General de Corrientes y Voltajes
+
+A continuación se presenta un diagrama detallado que ilustra el flujo de corrientes, los potenciales en cada terminal y las relaciones matemáticas fundamentales para un transistor en configuración de Emisor Común (con estabilización de emisor).
+
+![Corrientes y Voltajes Detallados en EC](../assets/bjt-detalles-corrientes-voltajes-ec.png)
+
+#### Resumen de Relaciones Fundamentales
+
+Del análisis del circuito se desprenden las siguientes relaciones de corriente:
+*   $I_E = I_B + I_C$ (Ley de Kirchhoff de corrientes).
+*   Si consideramos que en la región activa $I_C = \beta I_B$, entonces:
+    $$I_E = I_B + \beta I_B = (1 + \beta) I_B$$
+    A esta relación la denominaremos **Ecuación 1**.
+
+Basado en el diagrama anterior, las ecuaciones que rigen el comportamiento DC son:
+...
+*   **Corrientes:**
+    *   $I_E = I_C + I_B$ (Ley de Kirchhoff de corrientes).
+    *   $I_C = \beta I_B$ (Relación de ganancia en región activa).
+    *   $I_E = (\beta + 1) I_B$ (Corriente de emisor en función de la base).
+*   **Voltajes de Nodo:**
+    *   $V_E = I_E R_E$ (Caída en la resistencia de emisor).
+    *   $V_B = V_E + V_{BE}$ (Voltaje de base respecto a tierra).
+    *   $V_C = V_{CC} - I_C R_C$ (Voltaje de colector respecto a tierra).
+*   **Voltajes entre Terminales:**
+    *   $V_{CE} = V_C - V_E$ (Diferencia de potencial colector-emisor).
 
 ### Malla de entrada (equivalente con $V_{BE}$)
 
@@ -41,6 +68,25 @@ Donde $V_C = V_{CC} - I_C R_C$ y $V_B = V_{CC} - I_B R_B$.
 ### Esquema de Polarización Fija (Emisor Común)
 
 ![Esquema de Polarización Fija (Emisor Común)](../assets/bjt-emisor-comun-polarizacion-fija.png)
+
+### Estabilización por Resistencia de Emisor
+
+Al incluir una resistencia en el terminal del emisor ($R_E$), se introduce un mecanismo de **retroalimentación negativa** que estabiliza el punto de operación $Q$ frente a variaciones de temperatura o cambios en el parámetro $\beta$.
+
+![Configuración con Estabilización de Emisor](../assets/bjt-emisor-comun-estabilizacion.png)
+
+#### Mecanismo de Estabilización
+
+La adición de $R_E$ permite que el punto de operación sea más independiente de los cambios en los parámetros internos del transistor mediante el siguiente proceso:
+
+1.  **Relación de voltajes en la entrada:** El voltaje efectivo entre base y emisor se define por la diferencia de potencial entre dichos terminales:
+    $$V_{BE} = V_B - V_E$$
+    Donde $V_E$ es el voltaje de emisor con respecto a tierra:
+    $$V_E = I_E R_E$$
+2.  **Compensación automática:** Cualquier cambio en los parámetros que provoque un incremento en la corriente de colector ($I_C$), causará que la corriente de emisor ($I_E$) se incremente en la misma proporción ($I_E \approx I_C$).
+3.  **Retroalimentación de voltaje:** Según la ecuación $V_E = I_E R_E$, el aumento de $I_E$ produce un incremento directamente proporcional en $V_E$.
+4.  **Reducción de la excitación:** Si asumimos que el voltaje de base $V_B$ permanece constante, la ecuación $V_{BE} = V_B - V_E$ muestra que un incremento en $V_E$ reduce el voltaje $V_{BE}$.
+5.  **Efecto estabilizador:** La reducción de $V_{BE}$ provoca una disminución en la corriente de base ($I_B$), lo que a su vez reduce $I_C$, compensando así la tendencia inicial al incremento y manteniendo el punto $Q$ estable.
 
 ---
 
@@ -174,3 +220,107 @@ $$Q=(V_{CEQ}, I_{CQ})\approx (0.17\,V,\; 5.9\,mA)$$
 Como verificación rápida (aproximación típica de saturación):
 
 $$I_{CQ}\approx \frac{V_{CC}-V_{CE(sat)}}{R_C}=\frac{12-0.2}{2\,k\Omega}\approx 5.9\,mA$$
+
+---
+
+## Divisor de Voltaje
+
+Al utilizar un transistor para amplificar una señal, el primer paso fundamental es realizar la **polarización**. El objetivo principal de este proceso es activar el dispositivo y establecer un **punto de operación $Q$** estable dentro de la **región lineal** (región activa). De esta manera, se asegura que cualquier cambio en la señal de entrada produzca un cambio proporcional en la señal de salida, evitando distorsiones.
+
+En la figura siguiente se muestra el circuito de un transistor utilizando una configuración de **divisor de voltaje**. Esta técnica es ampliamente utilizada debido a que permite mantener prácticamente constante el voltaje de entrada en CD ($V_B$), haciendo que el punto de operación sea altamente independiente de las variaciones del parámetro $\beta$ del transistor.
+
+#### Esquema del Circuito y Voltajes
+
+El siguiente diagrama muestra la disposición de las resistencias $R_1, R_2, R_C$ y $R_E$, así como la alimentación única $V_{CC}$ que establece los potenciales de polarización.
+
+![Circuito de Polarización por Divisor de Voltaje](../assets/bjt-divisor-voltaje-circuito.png)
+*Figura 1: Configuración de polarización por divisor de voltaje con resistencias de colector y emisor alineadas.*
+
+#### Distribución de Corrientes
+
+En este esquema se detallan las corrientes que circulan por el divisor ($I_1, I_2$) y los terminales del transistor ($I_B, I_C, I_E$). La estabilidad del circuito radica en que si $I_1 \gg I_B$, el voltaje en la base queda fijado casi exclusivamente por la relación entre $R_1$ y $R_2$.
+
+![Distribución de Corrientes en Divisor de Voltaje](../assets/bjt-divisor-voltaje-corrientes.png)
+*Figura 2: Mapa de corrientes en la configuración de divisor de voltaje. Se observa la relación $I_1 = I_2 + I_B$ y $I_E = I_C + I_B$.*
+
+---
+
+### Análisis mediante Equivalente de Thévenin
+
+Para realizar el análisis del comportamiento del circuito, se aplica el **Teorema de Thévenin** en la entrada del amplificador. Este procedimiento simplifica el divisor de voltaje en la base a una única fuente de voltaje $V_{TH}$ en serie con una resistencia $R_{TH}$, facilitando el cálculo de las corrientes de malla, tal y como se muestra en la figura siguiente:
+
+![Circuito Equivalente de Thévenin](../assets/bjt-divisor-thevenin-equivalente.png)
+*Figura 3: Modelo simplificado de la etapa de entrada utilizando el equivalente de Thévenin.*
+
+#### Desarrollo Matemático de Thévenin
+
+Para transformar el divisor de voltaje en su equivalente de Thévenin, se siguen estos pasos:
+
+**1. Cálculo de la Resistencia de Thévenin ($R_{TH}$):**
+Para encontrar $R_{TH}$, se desactivan todas las fuentes independientes (en este caso $V_{CC}$, conectándola a tierra). Al observar desde el terminal de la base hacia el divisor:
+*   $R_1$ queda conectada entre la base y tierra.
+*   $R_2$ queda conectada entre la base y tierra.
+*   Por lo tanto, ambas resistencias están en **paralelo**:
+
+$$R_{TH} = R_1 \parallel R_2 = \frac{R_1 \cdot R_2}{R_1 + R_2} \quad \text{--- (Ec. 2)}$$
+
+**2. Cálculo del Voltaje de Thévenin ($V_{TH}$):**
+El voltaje de Thévenin es el voltaje de circuito abierto en el terminal de la base (desconectando el transistor). El circuito se convierte en un divisor de voltaje simple alimentado por $V_{CC}$:
+*   La corriente que circula por el divisor (sin carga) es: $I_{div} = \frac{V_{CC}}{R_1 + R_2}$
+*   El voltaje en $R_2$ (que es $V_{TH}$) se obtiene aplicando la Ley de Ohm:
+
+$$V_{TH} = V_{CC} \cdot \frac{R_2}{R_1 + R_2} \quad \text{--- (Ec. 3)}$$
+
+#### Cálculo de la Corriente de Base ($I_B$)
+
+Una vez obtenido el equivalente de Thévenin, podemos analizar la **malla de entrada** del circuito simplificado (Figura 3). Aplicando la Ley de Voltajes de Kirchhoff (LVK) en dicha malla:
+
+$$-V_{TH} + R_{TH} I_B + V_{BE} + I_E R_E = 0$$
+
+Reordenando los términos para igualar a la fuente:
+
+$$R_{TH} I_B + V_{BE} + I_E R_E = V_{TH}$$
+
+Sustituyendo $I_E$ por su equivalente en función de $I_B$ mediante la **Ecuación 1** ($I_E = (1 + \beta) I_B$):
+
+$$R_{TH} I_B + V_{BE} + (1 + \beta) I_B R_E = V_{TH}$$
+
+Agrupando los términos que contienen $I_B$ para factorizar:
+
+$$I_B \left[ R_{TH} + (1 + \beta) R_E \right] + V_{BE} = V_{TH}$$
+
+Despejando finalmente la corriente de base:
+
+$$I_B = \frac{V_{TH} - V_{BE}}{R_{TH} + (1 + \beta) R_E} \quad \text{--- (Ec. 4)}$$
+
+Esta expresión es fundamental para el diseño, ya que permite observar cómo la resistencia de emisor $R_E$ aparece "reflejada" en la base multiplicada por el factor $(1 + \beta)$, lo que contribuye significativamente a la estabilidad del circuito frente a variaciones del transistor.
+
+#### Análisis de la Malla de Salida ($V_{CE}$)
+
+Para completar el análisis del punto de operación $Q$, examinamos la **malla de salida** (colector-emisor). Aplicando la LVK a la malla de salida:
+
+$$-V_{CC} + I_C R_C + V_{CE} + I_E R_E = 0$$
+
+Despejando el voltaje colector-emisor ($V_{CE}$):
+
+$$V_{CE} = V_{CC} - I_C R_C - I_E R_E$$
+
+Para expresar $V_{CE}$ exclusivamente en términos de la corriente de base $I_B$, sustituimos $I_C = \beta I_B$ e $I_E = (1 + \beta) I_B$:
+
+$$V_{CE} = V_{CC} - I_B \left[ \beta R_C + (1 + \beta) R_E \right]$$
+
+Finalmente, la ecuación para la **recta de carga DC** en términos de la corriente de colector (asumiendo $I_E \approx I_C$) es:
+
+$$V_{CE} = V_{CC} - (R_C + R_E) I_C \quad \text{--- (Ec. 5)}$$
+
+Para trazar esta recta de carga en el plano característico del transistor ($I_C$ vs $V_{CE}$), identificamos los **puntos extremos** de operación:
+
+*   **Punto de Saturación (Máxima Corriente):** Ocurre cuando el voltaje entre colector y emisor es idealmente cero ($V_{CE} = 0$).
+    $$I_C = \frac{V_{CC}}{R_C + R_E}$$
+*   **Punto de Corte (Máximo Voltaje):** Ocurre cuando el transistor no conduce corriente ($I_C = 0$).
+    $$V_{CE} = V_{CC}$$
+
+A continuación se muestra la representación gráfica de esta relación lineal, donde el eje de las ordenadas (Y) corresponde a la corriente de colector $I_C$ y el eje de las abscisas (X) al voltaje colector-emisor $V_{CE}$:
+
+![Recta de Carga DC - Divisor de Voltaje](../assets/bjt-recta-carga-divisor.png)
+*Figura 4: Recta de carga DC mostrando los límites teóricos de operación (Corte y Saturación).*

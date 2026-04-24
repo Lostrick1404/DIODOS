@@ -14,6 +14,15 @@ last_updated: 2026-03-20
 
 ---
 
+## 🏗️ Estructura y Navegación
+
+*   🗺️ **[Mapa del Repositorio (Repo-Map)](00-meta/repo-map.md)** — Visión estructurada de archivos, herramientas y módulos.
+*   📋 **[Guía de Estudio](00-meta/study-guide.md)** — Ruta sugerida para el aprendizaje.
+*   📖 **[Temario Oficial](00-meta/temario.md)** — Organización curricular de la materia.
+*   📚 **[Glosario Técnico](glossary.md)** — Diccionario de términos y simbología.
+
+---
+
 ## Módulo 01: Circuitos de Aplicación con Diodos (`DIO`)
 
 - [Intro](topics/01-circuitos-diodos/DIO-00-Intro.md) | [README](topics/01-circuitos-diodos/README.md) | [Índice](topics/01-circuitos-diodos/00-Index.md)

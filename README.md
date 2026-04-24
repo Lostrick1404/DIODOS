@@ -94,12 +94,14 @@ python "topics/01-circuitos-diodos/Notas/PRACTICA 1/practica1_calculadora.py"
 
 ## Arquitectura del Repositorio
 
+Para una descripción exhaustiva de la estructura de archivos y módulos, consulte el **[Mapa del Repositorio (Repo-Map)](00-meta/repo-map.md)**.
+
 ```
 DIODOS-Y-TRANSISTORES/
 ├── README.md, AGENTS.md, WIKI_INDEX.md, glossary.md
 ├── CHANGELOG.md              → Registro de cambios
 ├── 00-meta/                  → Centro de control
-│   ├── repo-map.md           → Mapa estructural
+│   ├── repo-map.md           → MAPA ESTRUCTURAL (Referencia principal)
 │   ├── naming-conventions.md → Estándares de nomenclatura
 │   ├── standards.md          → Directivas técnicas
 │   ├── tools/                → Scripts Python
