@@ -322,6 +322,49 @@ last_updated: 2026-04-17
 
 ## Módulo 02 — Transistor BJT (`BJT`)
 
+### BJT-gen-emisor-comun-polarizacion-fija.py
+
+| Campo | Valor |
+|-------|-------|
+| **Script** | `00-META/tools/BJT-gen-emisor-comun-polarizacion-fija.py` |
+| **Módulo** | `BJT` — 02-Transistor-BJT |
+| **Descripción** | Esquema de polarización fija para Emisor Común (BJT) |
+
+| Imagen generada | Ruta | Referenciada en |
+|----------------|------|-----------------|
+| `bjt-emisor-comun-polarizacion-fija.png` | `topics/02-transistor-bjt/assets/` | [Nota4.md](../../topics/02-transistor-bjt/Notas/Nota4.md) |
+
+---
+
+### BJT-gen-malla-entrada-vbe.py
+
+| Campo | Valor |
+|-------|-------|
+| **Script** | `00-META/tools/BJT-gen-malla-entrada-vbe.py` |
+| **Módulo** | `BJT` — 02-Transistor-BJT |
+| **Descripción** | Diagrama equivalente de la malla de entrada (VCC–RB–$V_{BE}\approx0.7\,V$) para deducir $I_B$ por LVK |
+
+| Imagen generada | Ruta | Referenciada en |
+|----------------|------|-----------------|
+| `bjt-malla-entrada-vbe.png` | `topics/02-transistor-bjt/assets/` | [Nota4.md](../../topics/02-transistor-bjt/Notas/Nota4.md) |
+
+---
+
+### BJT-gen-ejemplo-punto-operacion-ec.py
+
+| Campo | Valor |
+|-------|-------|
+| **Script** | `00-META/tools/BJT-gen-ejemplo-punto-operacion-ec.py` |
+| **Módulo** | `BJT` — 02-Transistor-BJT |
+| **Descripción** | Ejemplo de punto de operación en Emisor Común (VCC=12 V, RC=2 kΩ, RB variable): genera circuito y curvas de salida con recta de carga y Q |
+
+| Imagen generada | Ruta | Referenciada en |
+|----------------|------|-----------------|
+| `bjt-ejemplo-ec-circuito-12v-rb-rc.png` | `topics/02-transistor-bjt/assets/` | [Nota4.md](../../topics/02-transistor-bjt/Notas/Nota4.md) |
+| `bjt-ejemplo-ec-curvas-q-recta-carga.png` | `topics/02-transistor-bjt/assets/` | [Nota4.md](../../topics/02-transistor-bjt/Notas/Nota4.md) |
+
+---
+
 ### BJT-gen-curvas-caracteristicas.py
 
 | Campo | Valor |
@@ -333,7 +376,7 @@ last_updated: 2026-04-17
 | Imagen generada | Ruta | Referenciada en |
 |----------------|------|-----------------|
 | `bjt_familia_curvas_ic_vce.png` | `topics/02-transistor-bjt/assets/` | [Nota3.md](../../topics/02-transistor-bjt/Notas/Nota3.md) |
-| `bjt_recta_carga_dc.png` | `topics/02-transistor-bjt/assets/` | Sin referencia actual |
+| `bjt_recta_carga_dc.png` | `topics/02-transistor-bjt/assets/` | [Nota4.md](../../topics/02-transistor-bjt/Notas/Nota4.md) |
 | `bjt_regiones_operacion.png` | `topics/02-transistor-bjt/assets/` | Sin referencia actual |
 
 ---
