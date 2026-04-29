@@ -5,8 +5,9 @@ topic_id: control-scripts
 file_id: Control_Scripts
 status: active
 audience: ai_context
-last_updated: 2026-04-17
+last_updated: 2026-04-29
 -->
+
 
 # 📋 Control de Scripts de Generación de Gráficos
 
@@ -322,11 +323,23 @@ last_updated: 2026-04-17
 
 ## Módulo 02 — Transistor BJT (`BJT`)
 
+### BJT-gen-nota5-diagrama-polarizacion-divisor.py
+
+| Campo | Valor |
+|-------|-------|
+| **Script** | `00-meta/tools/BJT-gen-nota5-diagrama-polarizacion-divisor.py` |
+| **Módulo** | `BJT` — 02-Transistor-BJT |
+| **Descripción** | Diagrama (schemdraw) del circuito de polarización por divisor (método de Thévenin) con los valores finales del Ejercicio de la Nota 5 (2N2222) |
+
+| Imagen generada | Ruta | Referenciada en |
+|----------------|------|-----------------|
+| `bjt-nota5-diagrama-polarizacion-divisor.png` | `topics/02-transistor-bjt/assets/` | [Nota5.md](../../topics/02-transistor-bjt/Notas/Nota5.md) |
+
 ### BJT-gen-emisor-comun-polarizacion-fija.py
 
 | Campo | Valor |
 |-------|-------|
-| **Script** | `00-META/tools/BJT-gen-emisor-comun-polarizacion-fija.py` |
+| **Script** | `00-meta/tools/BJT-gen-emisor-comun-polarizacion-fija.py` |
 | **Módulo** | `BJT` — 02-Transistor-BJT |
 | **Descripción** | Esquema de polarización fija para Emisor Común (BJT) |
 
@@ -340,7 +353,7 @@ last_updated: 2026-04-17
 
 | Campo | Valor |
 |-------|-------|
-| **Script** | `00-META/tools/BJT-gen-malla-entrada-vbe.py` |
+| **Script** | `00-meta/tools/BJT-gen-malla-entrada-vbe.py` |
 | **Módulo** | `BJT` — 02-Transistor-BJT |
 | **Descripción** | Diagrama equivalente de la malla de entrada (VCC–RB–$V_{BE}\approx0.7\,V$) para deducir $I_B$ por LVK |
 
@@ -354,7 +367,7 @@ last_updated: 2026-04-17
 
 | Campo | Valor |
 |-------|-------|
-| **Script** | `00-META/tools/BJT-gen-ejemplo-punto-operacion-ec.py` |
+| **Script** | `00-meta/tools/BJT-gen-ejemplo-punto-operacion-ec.py` |
 | **Módulo** | `BJT` — 02-Transistor-BJT |
 | **Descripción** | Ejemplo de punto de operación en Emisor Común (VCC=12 V, RC=2 kΩ, RB variable): genera circuito y curvas de salida con recta de carga y Q |
 
@@ -362,6 +375,22 @@ last_updated: 2026-04-17
 |----------------|------|-----------------|
 | `bjt-ejemplo-ec-circuito-12v-rb-rc.png` | `topics/02-transistor-bjt/assets/` | [Nota4.md](../../topics/02-transistor-bjt/Notas/Nota4.md) |
 | `bjt-ejemplo-ec-curvas-q-recta-carga.png` | `topics/02-transistor-bjt/assets/` | [Nota4.md](../../topics/02-transistor-bjt/Notas/Nota4.md) |
+
+---
+
+### BJT-gen-switch-corte-saturacion.py
+
+| Campo | Valor |
+|-------|-------|
+| **Script** | `00-meta/tools/BJT-gen-switch-corte-saturacion.py` |
+| **Módulo** | `BJT` — 02-Transistor-BJT |
+| **Descripción** | Diagrama (schemdraw) de un BJT NPN como switch (carga resistiva en el colector) con simbología estándar ($V_{CC}$, $V_{in}$, $V_{out}$, $V_{CE}$, $V_{BE}$) + gráfica conceptual de los estados OFF (corte) y ON (saturación) |
+
+| Imagen generada | Ruta | Referenciada en |
+|----------------|------|-----------------|
+| `bjt-switch-01-circuito.png` | `topics/02-transistor-bjt/assets/` | [Nota5.md](../../topics/02-transistor-bjt/Notas/Nota5.md) |
+| `bjt-switch-02-estados.png` | `topics/02-transistor-bjt/assets/` | [Nota5.md](../../topics/02-transistor-bjt/Notas/Nota5.md) |
+| `bjt-switch-03-curvas-corte-saturacion.png` | `topics/02-transistor-bjt/assets/` | [Nota5.md](../../topics/02-transistor-bjt/Notas/Nota5.md) |
 
 ---
 
