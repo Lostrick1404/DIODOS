@@ -19,9 +19,6 @@ last_updated: 2026-03-20
 | Carpeta | Descripción |
 |---------|-------------|
 | `theory/` | Un archivo `.md` por cada subtema del temario (DIO-01 a DIO-08) |
-| `methods/` | Procedimientos paso a paso (compartidos por todo el módulo) |
-| `problems/` | Ejercicios del módulo |
-| `solutions/` | Soluciones desarrolladas |
 | `assets/` | Imágenes PNG generadas por scripts Python |
 | `Notas/` | Material de clase pendiente de migrar a `theory/` |
 
@@ -92,7 +89,7 @@ Un subtema se considera migrado cuando:
 
 ## Lecciones Aprendidas — Esquemáticos schemdraw
 
-Errores documentados durante la generación del esquemático del rectificador de derivación central. Estas reglas complementan [00-meta/standards.md](../../00-meta/standards.md).
+Errores documentados durante la generación del esquemático del rectificador de derivación central. Estas reglas complementan las directivas técnicas de [ARQUITECTURE.md](../../ARQUITECTURE.md#3-estándares-técnicos-y-directivas-de-ia).
 
 ### Transformadores con derivación central
 

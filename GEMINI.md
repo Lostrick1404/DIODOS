@@ -17,17 +17,19 @@
 
 | Documento | Propósito |
 |-----------|-----------|
-| [AGENTS.md](AGENTS.md) | Directiva general completa |
-| [00-meta/repo-map.md](00-meta/repo-map.md) | Mapa estructural del repositorio |
-| [00-meta/naming-conventions.md](00-meta/naming-conventions.md) | Estándares de nomenclatura |
-| [00-meta/standards.md](00-meta/standards.md) | Directivas técnicas (schemdraw, LaTeX) |
-| [00-meta/tools/Control_Scripts.md](00-meta/tools/Control_Scripts.md) | Registro de scripts e imágenes |
+| [AGENTS.md](AGENTS.md) | Directiva general de comportamiento IA |
+| [ARQUITECTURE.md](ARQUITECTURE.md) | **Fuente de verdad única** (Mapa, Nomenclatura, Estándares) |
+| [scripts/Control_Scripts.md](scripts/Control_Scripts.md) | Registro de scripts e imágenes |
 | [glossary.md](glossary.md) | Glosario de términos técnicos |
 | [WIKI_INDEX.md](WIKI_INDEX.md) | Mapa de navegación |
 
 ---
 
-## Extensiones Específicas para Gemini
+### Preferencias de Estilo y GUI
+
+- **Comentarios:** Didácticos y técnicos en todo el código.
+- **GUI:** Paletas oscuras (estilo editor) para Tkinter.
+- **Salida:** Tablas de resumen seguidas de gráficos.
 
 ### Directiva de mejora de redacción para Notas/
 
@@ -49,7 +51,7 @@ source .venv/bin/activate  # Linux/Codespaces
 export DISPLAY=:1
 
 # Ejecutar scripts desde la raíz
-python 00-meta/tools/DIO-gen-curva-iv.py
+python scripts/DIO-gen-curva-iv.py
 ```
 
 ---
@@ -65,7 +67,7 @@ topics/
 └── 05-proyecto-final/    (PRO)
 ```
 
-Cada módulo contiene: `README.md`, `manifest.json`, `directives.md`, `theory/`, `methods/`, `problems/`, `solutions/`, `assets/`, `Notas/`.
+Cada módulo contiene: `README.md`, `manifest.json`, `directives.md`, `theory/`, `assets/`, `Notas/`.
 
 ---
 

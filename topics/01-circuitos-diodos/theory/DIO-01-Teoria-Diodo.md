@@ -122,7 +122,7 @@ A menudo se simplifica diciendo que la corriente en inversa es cero. Sin embargo
 Esta gráfica muestra específicamente la magnitud del desfase entre el eje cero (corriente nula) y la curva real de corriente de fuga:
 ![Zoom Región Inversa](../media/generated/DIO-curva-iv-02-zoom-inversa.png)
 
-> **Nota Técnica:** Las gráficas anteriores fueron generadas automáticamente utilizando el script [`DIO-gen-curva-iv.py`](../../00-META/tools/DIO-gen-curva-iv.py), el cual utiliza la ecuación teórica de Shockley para modelar el comportamiento.
+> **Nota Técnica:** Las gráficas anteriores fueron generadas automáticamente utilizando el script [`DIO-gen-curva-iv.py`](../../scripts/DIO-gen-curva-iv.py), el cual utiliza la ecuación teórica de Shockley para modelar el comportamiento.
 
 ---
 

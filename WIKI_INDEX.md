@@ -16,9 +16,9 @@ last_updated: 2026-03-20
 
 ## 🏗️ Estructura y Navegación
 
-*   🗺️ **[Mapa del Repositorio (Repo-Map)](00-meta/repo-map.md)** — Visión estructurada de archivos, herramientas y módulos.
-*   📋 **[Guía de Estudio](00-meta/study-guide.md)** — Ruta sugerida para el aprendizaje.
-*   📖 **[Temario Oficial](00-meta/temario.md)** — Organización curricular de la materia.
+*   🏗️ **[Arquitectura y Estándares](ARQUITECTURE.md)** — Mapa estructural, nomenclatura y directivas técnicas.
+*   📋 **[Ruta de Aprendizaje](ARQUITECTURE.md#7-metodología-de-estudio-y-trabajo)** — Guía de estudio y prerrequisitos.
+*   📖 **[Temario Oficial](ARQUITECTURE.md#4-temario-y-mapeo-de-contenidos)** — Organización curricular.
 *   📚 **[Glosario Técnico](glossary.md)** — Diccionario de términos y simbología.
 
 ---
@@ -26,7 +26,7 @@ last_updated: 2026-03-20
 ## Módulo 01: Circuitos de Aplicación con Diodos (`DIO`)
 
 - [Intro](topics/01-circuitos-diodos/DIO-00-Intro.md) | [README](topics/01-circuitos-diodos/README.md) | [Índice](topics/01-circuitos-diodos/00-Index.md)
-- Carpetas: [theory/](topics/01-circuitos-diodos/theory/) · [methods/](topics/01-circuitos-diodos/methods/) · [problems/](topics/01-circuitos-diodos/problems/) · [solutions/](topics/01-circuitos-diodos/solutions/) · [assets/](topics/01-circuitos-diodos/assets/)
+- Carpetas: [theory/](topics/01-circuitos-diodos/theory/) · [assets/](topics/01-circuitos-diodos/assets/)
 
 | # | Subtema | Archivo de Teoría |
 |---|---------|-------------------|
@@ -44,7 +44,7 @@ last_updated: 2026-03-20
 ## Módulo 02: Transistor Bipolar — BJT (`BJT`)
 
 - [Intro](topics/02-transistor-bjt/BJT-00-Intro.md) | [README](topics/02-transistor-bjt/README.md) | [Índice](topics/02-transistor-bjt/00-Index.md)
-- Carpetas: [theory/](topics/02-transistor-bjt/theory/) · [methods/](topics/02-transistor-bjt/methods/) · [problems/](topics/02-transistor-bjt/problems/) · [solutions/](topics/02-transistor-bjt/solutions/) · [assets/](topics/02-transistor-bjt/assets/)
+- Carpetas: [theory/](topics/02-transistor-bjt/theory/) · [assets/](topics/02-transistor-bjt/assets/)
 
 | # | Subtema | Archivo de Teoría |
 |---|---------|-------------------|
@@ -60,7 +60,7 @@ last_updated: 2026-03-20
 ## Módulo 03: Transistor Unipolar — FET / MOSFET (`FET`)
 
 - [Intro](topics/03-transistor-fet/FET-00-Intro.md) | [README](topics/03-transistor-fet/README.md) | [Índice](topics/03-transistor-fet/00-Index.md)
-- Carpetas: [theory/](topics/03-transistor-fet/theory/) · [methods/](topics/03-transistor-fet/methods/) · [problems/](topics/03-transistor-fet/problems/) · [solutions/](topics/03-transistor-fet/solutions/) · [assets/](topics/03-transistor-fet/assets/)
+- Carpetas: [theory/](topics/03-transistor-fet/theory/) · [assets/](topics/03-transistor-fet/assets/)
 
 | # | Subtema | Archivo de Teoría |
 |---|---------|-------------------|
@@ -76,7 +76,7 @@ last_updated: 2026-03-20
 ## Módulo 04: Amplificadores con BJT y FET (`AMP`)
 
 - [Intro](topics/04-amplificadores/AMP-00-Intro.md) | [README](topics/04-amplificadores/README.md) | [Índice](topics/04-amplificadores/00-Index.md)
-- Carpetas: [theory/](topics/04-amplificadores/theory/) · [methods/](topics/04-amplificadores/methods/) · [problems/](topics/04-amplificadores/problems/) · [solutions/](topics/04-amplificadores/solutions/) · [assets/](topics/04-amplificadores/assets/)
+- Carpetas: [theory/](topics/04-amplificadores/theory/) · [assets/](topics/04-amplificadores/assets/)
 
 | # | Subtema | Archivo de Teoría |
 |---|---------|-------------------|
@@ -89,7 +89,7 @@ last_updated: 2026-03-20
 ## Módulo 05: Proyecto Final (`PRO`)
 
 - [Intro](topics/05-proyecto-final/PRO-00-Intro.md) | [README](topics/05-proyecto-final/README.md) | [Índice](topics/05-proyecto-final/00-Index.md)
-- Carpetas: [theory/](topics/05-proyecto-final/theory/) · [methods/](topics/05-proyecto-final/methods/) · [problems/](topics/05-proyecto-final/problems/) · [solutions/](topics/05-proyecto-final/solutions/) · [assets/](topics/05-proyecto-final/assets/)
+- Carpetas: [theory/](topics/05-proyecto-final/theory/) · [assets/](topics/05-proyecto-final/assets/)
 
 | # | Subtema | Archivo de Teoría |
 |---|---------|-------------------|
@@ -102,24 +102,20 @@ last_updated: 2026-03-20
 
 | Recurso | Ubicación |
 |---------|-----------|
-| Temario | [00-meta/temario.md](00-meta/temario.md) |
+| Temario | [ARQUITECTURE.md#4-temario-y-mapeo-de-contenidos](ARQUITECTURE.md#4-temario-y-mapeo-de-contenidos) |
 | Glosario | [glossary.md](glossary.md) |
 | Directiva para IAs | [AGENTS.md](AGENTS.md) |
-| Nomenclatura | [00-meta/naming-conventions.md](00-meta/naming-conventions.md) |
-| Guía de Estudio | [00-meta/study-guide.md](00-meta/study-guide.md) |
-| Mapa del Repo | [00-meta/repo-map.md](00-meta/repo-map.md) |
-| Registro de Scripts | [00-meta/tools/Control_Scripts.md](00-meta/tools/Control_Scripts.md) |
+| Nomenclatura | [ARQUITECTURE.md#2-convenciones-de-nomenclatura](ARQUITECTURE.md#2-convenciones-de-nomenclatura) |
+| Guía de Estudio | [ARQUITECTURE.md#7-metodología-de-estudio-y-trabajo](ARQUITECTURE.md#7-metodología-de-estudio-y-trabajo) |
+| Mapa del Repo | [ARQUITECTURE.md#1-visión-general-y-mapa-del-repositorio](ARQUITECTURE.md#1-visión-general-y-mapa-del-repositorio) |
+| Registro de Scripts | [scripts/Control_Scripts.md](scripts/Control_Scripts.md) |
 | Changelog | [CHANGELOG.md](CHANGELOG.md) |
 
 ---
 
 ## Sistema de Auditorías
 
-| Recurso | Ubicación |
-|---------|-----------|
-| Reportes | [audits/reports/](audits/reports/) |
-| Logs | [audits/logs/](audits/logs/) |
-| Snapshots | [audits/snapshots/](audits/snapshots/) |
+*   🔍 **[Historial de Auditorías](AUDITORIA.md)** — Registro centralizado de validaciones y estado del repositorio.
 
 ---
 

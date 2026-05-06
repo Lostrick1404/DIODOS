@@ -42,9 +42,6 @@ Dominar los circuitos de aplicación con diodos, desde la comprensión de la pol
 | Carpeta | Contenido |
 |---------|-----------|
 | `theory/` | Archivos de teoría por subtema |
-| `methods/` | Procedimientos paso a paso |
-| `problems/` | Ejercicios |
-| `solutions/` | Soluciones desarrolladas |
 | `media/generated/` | Gráficas y scripts Python |
 | `Notas/` | Zona libre (sandbox) |
 
@@ -54,6 +51,6 @@ Dominar los circuitos de aplicación con diodos, desde la comprensión de la pol
 
 | Gráfica | Script |
 |---------|--------|
-| Curva I-V completa del diodo | [DIO-gen-curva-iv.py](../00-META/tools/DIO-gen-curva-iv.py) |
-| Efecto de temperatura (3 regiones) | [DIO-gen-curva-temperatura-split.py](../00-META/tools/DIO-gen-curva-temperatura-split.py) |
-| Efecto de temperatura (vista global) | [DIO-gen-curva-temperatura.py](../00-META/tools/DIO-gen-curva-temperatura.py) |
+| Curva I-V completa del diodo | [DIO-gen-curva-iv.py](../scripts/DIO-gen-curva-iv.py) |
+| Efecto de temperatura (3 regiones) | [DIO-gen-curva-temperatura-split.py](../scripts/DIO-gen-curva-temperatura-split.py) |
+| Efecto de temperatura (vista global) | [DIO-gen-curva-temperatura.py](../scripts/DIO-gen-curva-temperatura.py) |

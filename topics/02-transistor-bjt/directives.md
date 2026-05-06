@@ -19,9 +19,6 @@ last_updated: 2026-03-20
 | Carpeta | Descripción |
 |---------|-------------|
 | `theory/` | Un archivo `.md` por cada subtema del temario (BJT-01 a BJT-06) |
-| `methods/` | Procedimientos paso a paso |
-| `problems/` | Ejercicios del módulo |
-| `solutions/` | Soluciones desarrolladas |
 | `assets/` | Imágenes PNG generadas por scripts Python |
 | `Notas/` | Material de clase pendiente de migrar a `theory/` |
 

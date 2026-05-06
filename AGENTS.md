@@ -33,16 +33,12 @@ DIODOS-Y-TRANSISTORES/
 ├── CHANGELOG.md                    → Registro de cambios
 ├── .github/copilot-instructions.md → Contexto específico para GitHub Copilot
 │
-├── 00-meta/                        → Centro de control
-│   ├── repo-map.md                 → Mapa estructural del repositorio
-│   ├── naming-conventions.md       → Estándares de nomenclatura
-│   ├── standards.md                → Directivas técnicas (schemdraw, LaTeX)
-│   ├── bibliography.md             → Fuentes bibliográficas
-│   ├── study-guide.md              → Guía de estudio para alumnos
-│   ├── temario.md                  → Temario oficial de la materia
-│   ├── tools/                      → Scripts de generación de gráficos (Python)
-│   │   └── Control_Scripts.md      → Registro centralizado de scripts e imágenes
+├── 00-meta/                        → Centro de plantillas (Depreciado para documentación)
 │   └── templates/                  → Plantillas para futuros repositorios
+├── scripts/                        → Herramientas y scripts de automatización (Python)
+│   └── Control_Scripts.md          → Registro centralizado de scripts e imágenes
+├── ARQUITECTURE.md                 → Arquitectura, estándares y convenciones (UNIFICADO)
+├── AUDITORIA.md                    → Historial de auditorías y validaciones (UNIFICADO)
 │
 ├── topics/                         → Contenido educativo estructurado
 │   ├── 01-circuitos-diodos/  (DIO) → Módulo 1
@@ -50,11 +46,6 @@ DIODOS-Y-TRANSISTORES/
 │   ├── 03-transistor-fet/    (FET) → Módulo 3
 │   ├── 04-amplificadores/    (AMP) → Módulo 4
 │   └── 05-proyecto-final/    (PRO) → Módulo 5
-│
-├── audits/                         → Sistema de auditorías
-│   ├── logs/
-│   ├── reports/
-│   └── snapshots/
 │
 └── sandbox/                        → Zona de trabajo libre (no indexada)
 ```
@@ -68,9 +59,6 @@ topics/xx-nombre-modulo/
 ├── directives.md           → Instrucciones específicas del módulo para IA
 ├── formularios/            → Formularios de fórmulas clave
 ├── theory/                 → Desarrollo teórico por subtema
-├── methods/                → Procedimientos paso a paso
-├── problems/               → Ejercicios
-├── solutions/              → Soluciones desarrolladas
 ├── assets/                 → Imágenes PNG generadas por scripts Python
 └── Notas/                  → Material de clase pendiente de migrar a theory/
 ```
@@ -146,7 +134,7 @@ pip install numpy==2.4.2 matplotlib==3.10.8 schemdraw==0.22 pillow==12.1.0 packa
 
 | Modo | Backend | Uso |
 |------|---------|-----|
-| Headless (PNG) | `Agg` | Scripts en `00-meta/tools/` |
+| Headless (PNG) | `Agg` | Scripts en `scripts/` |
 | GUI interactiva | `TkAgg` | Calculadoras en `Notas/` |
 
 ```python
@@ -161,28 +149,28 @@ matplotlib.use('Agg')  # O 'TkAgg' para GUI
 
 ### 4.1 Ubicación y convención
 
-- **Directorio:** `00-meta/tools/`
+- **Directorio:** `scripts/`
 - **Patrón de nombre:** `[PREFIJO]-gen-[descripcion].py`
 - **Salida:** `topics/xx-modulo/assets/*.png`
 
 ### 4.2 Registro centralizado
 
-> Ver [00-meta/tools/Control_Scripts.md](00-meta/tools/Control_Scripts.md) para el inventario completo de scripts, imágenes generadas y referencias cruzadas.
+> Ver [scripts/Control_Scripts.md](scripts/Control_Scripts.md) para el inventario completo de scripts, imágenes generadas y referencias cruzadas.
 
 ### 4.3 Ejecución
 
 ```bash
 # Desde la raíz del repositorio:
-python 00-meta/tools/DIO-gen-curva-iv.py
+python scripts/DIO-gen-curva-iv.py
 
 # Todos los scripts:
-for script in 00-meta/tools/*.py; do python "$script"; done
+for script in scripts/*.py; do python "$script"; done
 ```
 
 **PowerShell (Windows):**
 ```powershell
 Set-Location "G:\REPOSITORIOS GITHUB\DIODOS Y TRANSISTORES"
-& ".venv\Scripts\python.exe" "00-meta/tools/SCRIPT.py"
+& ".venv\Scripts\python.exe" "scripts/SCRIPT.py"
 ```
 
 ### 4.4 Política de scripts
@@ -271,7 +259,7 @@ Solo se mejora la forma; los valores técnicos se respetan fielmente.
 2. **Consultar** `manifest.json` del módulo objetivo.
 3. **Revisar** `directives.md` del módulo para instrucciones específicas.
 4. **Generar** contenido siguiendo las reglas de este documento.
-5. **Si genera gráficas:** crear/modificar script en `00-meta/tools/`, ejecutar desde la raíz, actualizar `Control_Scripts.md`.
+5. **Si genera gráficas:** crear/modificar script en `scripts/`, ejecutar desde la raíz, actualizar `Control_Scripts.md`.
 
 ---
 
@@ -279,13 +267,10 @@ Solo se mejora la forma; los valores técnicos se respetan fielmente.
 
 | Documento | Propósito |
 |-----------|-----------|
-| [00-meta/repo-map.md](00-meta/repo-map.md) | Mapa estructural del repositorio |
-| [00-meta/naming-conventions.md](00-meta/naming-conventions.md) | Estándares de nomenclatura completos |
-| [00-meta/standards.md](00-meta/standards.md) | Directivas técnicas (schemdraw, LaTeX) |
-| [00-meta/bibliography.md](00-meta/bibliography.md) | Fuentes bibliográficas válidas |
-| [00-meta/tools/Control_Scripts.md](00-meta/tools/Control_Scripts.md) | Registro de scripts, imágenes y referencias |
-| [glossary.md](glossary.md) | Glosario de términos técnicos |
-| [WIKI_INDEX.md](WIKI_INDEX.md) | Mapa de navegación centralizado |
+| [ARQUITECTURE.md](ARQUITECTURE.md) | **Fuente de verdad única** para arquitectura, estándares, nomenclatura y temario. |
+| [scripts/Control_Scripts.md](scripts/Control_Scripts.md) | Registro de scripts, imágenes y referencias. |
+| [glossary.md](glossary.md) | Glosario de términos técnicos. |
+| [WIKI_INDEX.md](WIKI_INDEX.md) | Mapa de navegación centralizado. |
 
 ---
 
@@ -320,7 +305,17 @@ Solo se mejora la forma; los valores técnicos se respetan fielmente.
 
 ---
 
-## 10. Versionado
+## 11. Preferencias del Usuario
+
+| Categoría | Preferencia |
+|-----------|-------------|
+| **Comentarios** | Siempre incluir comentarios técnicos didácticos en el código generado. |
+| **Estética GUI** | Usar paletas oscuras (estilo editor) en herramientas con Tkinter; evitar colores brillantes. |
+| **Formato de Salida** | Preferencia por resúmenes tabulares seguidos de gráficos/formas de onda embebidas. |
+
+---
+
+## 12. Versionado
 
 | Versión | Fecha | Cambios |
 |---------|-------|---------|

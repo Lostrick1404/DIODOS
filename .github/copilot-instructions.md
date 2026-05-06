@@ -17,11 +17,17 @@
 
 | Documento | Propósito |
 |-----------|-----------|
-| [AGENTS.md](../AGENTS.md) | Directiva general completa |
-| [00-meta/repo-map.md](../00-meta/repo-map.md) | Mapa estructural |
-| [00-meta/naming-conventions.md](../00-meta/naming-conventions.md) | Estándares de nomenclatura |
-| [00-meta/standards.md](../00-meta/standards.md) | Directivas técnicas |
-| [00-meta/tools/Control_Scripts.md](../00-meta/tools/Control_Scripts.md) | Registro de scripts |
+| [AGENTS.md](../AGENTS.md) | Directiva general de comportamiento IA |
+| [ARQUITECTURE.md](../ARQUITECTURE.md) | **Fuente de verdad única** (Mapa, Nomenclatura, Estándares) |
+| [scripts/Control_Scripts.md](../scripts/Control_Scripts.md) | Registro de scripts |
+
+---
+
+## Preferencias de Estilo y GUI
+
+- **Comentarios:** Didácticos y técnicos en todo el código generado.
+- **GUI:** Paletas oscuras (estilo editor) para herramientas con Tkinter.
+- **Salida:** Tablas de resumen seguidas de gráficos/formas de onda.
 
 ---
 
@@ -156,10 +162,10 @@ El entorno es **PowerShell (pwsh)**. Su sintaxis difiere de bash:
 ```powershell
 # Patrón canónico — cambiar directorio y ejecutar script Python
 Set-Location "G:\REPOSITORIOS GITHUB\DIODOS Y TRANSISTORES"
-& ".venv\Scripts\python.exe" "00-meta/tools/SCRIPT.py"
+& ".venv\Scripts\python.exe" "scripts/SCRIPT.py"
 
 # En una sola línea
-Set-Location "G:\REPOSITORIOS GITHUB\DIODOS Y TRANSISTORES"; & ".venv\Scripts\python.exe" "00-meta/tools/SCRIPT.py" 2>&1
+Set-Location "G:\REPOSITORIOS GITHUB\DIODOS Y TRANSISTORES"; & ".venv\Scripts\python.exe" "scripts/SCRIPT.py" 2>&1
 ```
 
 ### Errores frecuentes y correcciones
@@ -248,10 +254,10 @@ Para circuitos con múltiples componentes (multiplicadores, fuentes reguladas, a
 
 Cada gráfico generado debe cumplir las siguientes reglas:
 
-1. **Un script por gráfico (o conjunto temático coherente).** Cada script Python en `00-meta/tools/` produce una o varias imágenes estrechamente relacionadas. No mezclar gráficos de temas distintos en un mismo script.
+1. **Un script por gráfico (o conjunto temático coherente).** Cada script Python en `scripts/` produce una o varias imágenes estrechamente relacionadas. No mezclar gráficos de temas distintos en un mismo script.
 2. **Referencia cruzada obligatoria.** Toda imagen generada debe estar referenciada en:
    - La **nota o documento** `.md` donde se utiliza (enlace Markdown estándar).
-   - El archivo de control **[Control_Scripts.md](00-meta/tools/Control_Scripts.md)**, donde se lleva el registro centralizado de todos los scripts, sus imágenes y las notas que las consumen.
+   - El archivo de control **[Control_Scripts.md](scripts/Control_Scripts.md)**, donde se lleva el registro centralizado de todos los scripts, sus imágenes y las notas que las consumen.
 3. **Metadatos en cada script.** Todo script `.py` debe incluir un bloque `::SCRIPT_METADATA::` en sus comentarios iniciales con al menos:
    - `script_id`: nombre del archivo sin extensión.
    - `module`: prefijo del módulo (`DIO`, `BJT`, `FET`, `AMP`, `PRO`).

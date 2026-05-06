@@ -19,12 +19,22 @@ last_updated: 2026-03-20
 
 | Para... | Ir a... |
 |---------|---------|
-| Estudiantes | [Guía de Estudio](00-meta/study-guide.md) |
-| Asistentes IA | [AGENTS.md](AGENTS.md) |
+| Estudiantes | [Guía de Estudio (Arquitectura)](ARQUITECTURE.md#5-metodología-de-estudio-y-trabajo) |
+| Asistentes IA | [ARQUITECTURE.md](ARQUITECTURE.md#🤖-instrucciones-para-asistentes-de-ia) |
+| Estándares y Mapa | [ARQUITECTURE.md](ARQUITECTURE.md) |
 | Contenido completo | [Índice Wiki](WIKI_INDEX.md) |
 | Definiciones | [Glosario](glossary.md) |
-| Temario oficial | [Temario](00-meta/temario.md) |
-| Mapa estructural | [Repo Map](00-meta/repo-map.md) |
+| Registro de Scripts | [Control Scripts](scripts/Control_Scripts.md) |
+
+---
+
+## 🤖 Instrucciones para Asistentes de IA (Resumen)
+
+Para garantizar la coherencia del repositorio, toda IA debe:
+1.  **Consultar [ARQUITECTURE.md](ARQUITECTURE.md)** para entender la estructura, nomenclatura y estándares técnicos.
+2.  **Seguir el [AGENTS.md](AGENTS.md)** para directivas de comportamiento y flujo de trabajo.
+3.  **Respetar los metadatos** en la cabecera de cada archivo Markdown.
+4.  **Validar scripts** contra las directivas de Schemdraw y Matplotlib unificadas.
 
 ---
 
@@ -78,7 +88,7 @@ graph LR
 ### Generación de Gráficas (Headless)
 
 ```bash
-python 00-meta/tools/DIO-gen-curva-iv.py
+python scripts/DIO-gen-curva-iv.py
 ```
 
 ### Calculadoras Interactivas (GUI)
@@ -94,25 +104,16 @@ python "topics/01-circuitos-diodos/Notas/PRACTICA 1/practica1_calculadora.py"
 
 ## Arquitectura del Repositorio
 
-Para una descripción exhaustiva de la estructura de archivos y módulos, consulte el **[Mapa del Repositorio (Repo-Map)](00-meta/repo-map.md)**.
+Para una descripción exhaustiva de la estructura de archivos, convenciones de nomenclatura y estándares técnicos, consulte el **[Documento de Arquitectura (ARQUITECTURE.md)](ARQUITECTURE.md)**.
 
 ```
 DIODOS-Y-TRANSISTORES/
-├── README.md, AGENTS.md, WIKI_INDEX.md, glossary.md
-├── CHANGELOG.md              → Registro de cambios
-├── 00-meta/                  → Centro de control
-│   ├── repo-map.md           → MAPA ESTRUCTURAL (Referencia principal)
-│   ├── naming-conventions.md → Estándares de nomenclatura
-│   ├── standards.md          → Directivas técnicas
-│   ├── tools/                → Scripts Python
+├── README.md, AGENTS.md, ARQUITECTURE.md, AUDITORIA.md
+├── WIKI_INDEX.md, glossary.md, CHANGELOG.md
+├── 00-meta/                  → Centro de herramientas (Plantillas)
 │   └── templates/            → Plantillas para futuros repos
-├── topics/                   → Contenido educativo
-│   ├── 01-circuitos-diodos/  → Módulo DIO
-│   ├── 02-transistor-bjt/    → Módulo BJT
-│   ├── 03-transistor-fet/    → Módulo FET
-│   ├── 04-amplificadores/    → Módulo AMP
-│   └── 05-proyecto-final/    → Módulo PRO
-├── audits/                   → Sistema de auditorías
+├── scripts/                  → Scripts Python y Control_Scripts.md
+├── topics/                   → Contenido educativo (DIO, BJT, FET, AMP, PRO)
 └── sandbox/                  → Zona de trabajo libre
 ```
 
@@ -122,11 +123,10 @@ DIODOS-Y-TRANSISTORES/
 
 ### Para Estudiantes
 
-1. Consulta el [Temario](00-meta/temario.md) para ver los temas de la materia.
+1. Consulta el [Temario](ARQUITECTURE.md#4-temario-y-mapeo-de-contenidos) para ver los temas de la materia.
 2. Navega al módulo de interés desde la tabla de arriba.
 3. En cada módulo: los subtemas están en `theory/`.
-4. Complementa con `methods/`, `problems/` y `solutions/`.
-5. Usa el [Glosario](glossary.md) para consultar definiciones.
+4. Usa el [Glosario](glossary.md) para consultar definiciones.
 
 ### Para Asistentes IA
 
@@ -134,3 +134,10 @@ DIODOS-Y-TRANSISTORES/
 2. Consultar `manifest.json` del módulo objetivo.
 3. Revisar `directives.md` del módulo.
 4. Generar contenido siguiendo las reglas establecidas.
+
+---
+
+## 📌 Recordatorios Locales
+
+- **Carpeta `Notas/`:** Es una zona sandbox libre de formato estricto, pero debe mantenerse organizada por temas para facilitar la búsqueda y posterior migración a `theory/`.
+- **Generación de Imágenes:** Incluso en la zona de `Notas/`, se debe preferir la generación de imágenes mediante scripts de Python en lugar de inserciones manuales, para mantener la trazabilidad.

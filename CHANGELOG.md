@@ -8,43 +8,29 @@ El formato está basado en [Keep a Changelog](https://keepachangelog.com/es/1.0.
 
 ## [Unreleased]
 
-### Changed
-- Reestructuración completa del repositorio según especificación modular
-- Módulos educativos movidos a `topics/`
-- Renombrado de carpetas a kebab-case
-- Consolidación de directivas IA en `AGENTS.md`
-- Simplificación del formato de `manifest.json`
-- `00-META/` → `00-meta/`
-- `media/generated/` → `assets/` en cada módulo
-- `_directives.md` → `directives.md` en cada módulo
-
 ### Added
-- Sistema de auditorías en `audits/`
-- Sandbox centralizado en `sandbox/`
-- Archivos `.editorconfig` y `CHANGELOG.md`
-- Directivas de migración de contenido `Notas/` a `theory/`
-- Carpeta `00-meta/templates/` para referencias de futuros repos
-- `00-meta/repo-map.md` - Mapa estructural del repositorio
+- `ARQUITECTURE.md`: Unificación de estándares, nomenclatura, mapa del repo y temario.
+- `AUDITORIA.md`: Historial unificado de auditorías y validaciones.
+
+### Changed
+- Consolidación de archivos de `00-meta/` en `ARQUITECTURE.md`.
+- Consolidación de reportes de `audits/` en `AUDITORIA.md`.
+- Actualización de todos los archivos de contexto IA (`AGENTS.md`, `GEMINI.md`, etc.) para apuntar a la nueva arquitectura unificada.
 
 ### Removed
-- `00-META/ia-contract.md` (contenido consolidado en AGENTS.md)
-- Duplicación excesiva entre archivos de directivas IA
-- Archivos temporales en raíz (`run_test.py`)
+- `00-meta/naming-conventions.md`, `repo-map.md`, `standards.md`, `temario.md`, `bibliography.md`, `study-guide.md`.
+- Directorio `audits/` completo.
 
-### Migrated
-- `Plantilla de Arquitectura Modular Universal.md` → `00-meta/templates/architecture-template.md`
-- `generate-claude-md-prompt.md` → `00-meta/templates/context-generation-prompts.md`
-- `Temario.md` → `00-meta/temario.md`
-- `AUDITORIA_ESTADO_REPO.md` → `audits/reports/2026-03-estado-inicial.md`
+## [2.1.0] - 2026-05-06
+- Reestructuración estratégica para reducir fragmentación documental.
+- Unificación de metadatos y auditorías en la raíz.
 
----
-
-## [1.0.0] - 2026-02-07
+## [2.0.0] - 2026-03-20
 
 ### Added
 - Estructura inicial del repositorio
 - 5 módulos educativos: DIO, BJT, FET, AMP, PRO
 - Sistema de manifest.json por módulo
-- Scripts de generación de gráficas en `00-META/tools/`
+- Scripts de generación de gráficas en `scripts/`
 - Glosario de términos técnicos
 - Índice wiki navegable

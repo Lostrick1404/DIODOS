@@ -22,9 +22,6 @@
 ├── manifest.json      ← Metadatos y estado
 ├── directives.md      ← Instrucciones para IA
 ├── theory/            ← Desarrollo teórico
-├── methods/           ← Procedimientos
-├── problems/          ← Ejercicios
-├── solutions/         ← Soluciones
 ├── formularios/       ← Resúmenes de fórmulas
 ├── assets/            ← Imágenes generadas
 └── Notas/             ← Material pendiente de migrar

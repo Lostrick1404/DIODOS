@@ -6,7 +6,7 @@
   "images": [
     {
       "filename": "DIO-curva-iv-01-general.png",
-      "script": "00-META/tools/DIO-gen-curva-iv.py",
+      "script": "scripts/DIO-gen-curva-iv.py",
       "figure_number": 1,
       "title": "Curva Característica I-V del Diodo (Completa)",
       "description": "Muestra las tres regiones de operación del diodo (directa, inversa y ruptura) en una sola gráfica. Incluye anotaciones de Vk ≈ 0.7V y VBR.",
@@ -23,7 +23,7 @@
     },
     {
       "filename": "DIO-curva-iv-02-zoom-inversa.png",
-      "script": "00-META/tools/DIO-gen-curva-iv.py",
+      "script": "scripts/DIO-gen-curva-iv.py",
       "figure_number": 2,
       "title": "Zoom: Región Inversa y Corriente de Fuga",
       "description": "Ampliación de la región inversa que revela la corriente de fuga Is, mostrando el desfase respecto al eje cero. Complementa la gráfica general donde la fuga es invisible.",
@@ -39,7 +39,7 @@
     },
     {
       "filename": "DIO-curva-temp-01-combinada.png",
-      "script": "00-META/tools/DIO-gen-curva-temperatura.py",
+      "script": "scripts/DIO-gen-curva-temperatura.py",
       "figure_number": 1,
       "title": "Efecto de la Temperatura: Directa, Inversa y Ruptura (Combinada)",
       "description": "Vista completa del efecto térmico en las tres regiones del diodo. Región directa usa Is calibrada (Vth correctos); inversa/ruptura usa Is empírica.",
@@ -55,7 +55,7 @@
     },
     {
       "filename": "DIO-curva-temp-02-directa.png",
-      "script": "00-META/tools/DIO-gen-curva-temperatura-split.py",
+      "script": "scripts/DIO-gen-curva-temperatura-split.py",
       "figure_number": 1,
       "title": "Efecto de Temperatura — Polarización Directa (Encendido)",
       "description": "Muestra cómo el voltaje de umbral Vth se desplaza con la temperatura. A mayor temperatura, el diodo conduce a menor voltaje. Vth marcado con líneas punteadas verticales.",
@@ -74,7 +74,7 @@
     },
     {
       "filename": "DIO-curva-temp-03-inversa.png",
-      "script": "00-META/tools/DIO-gen-curva-temperatura-split.py",
+      "script": "scripts/DIO-gen-curva-temperatura-split.py",
       "figure_number": 2,
       "title": "Efecto de Temperatura — Polarización Inversa (Corriente de Fuga)",
       "description": "Ampliación de la corriente de fuga (escala pA) mostrando cómo Is crece drásticamente con la temperatura. A 100°C: ~181 pA; a 25°C: 1 pA; a -100°C: despreciable.",
@@ -91,7 +91,7 @@
     },
     {
       "filename": "DIO-curva-temp-04-ruptura.png",
-      "script": "00-META/tools/DIO-gen-curva-temperatura-split.py",
+      "script": "scripts/DIO-gen-curva-temperatura-split.py",
       "figure_number": 3,
       "title": "Efecto de Temperatura — Región de Ruptura (Avalancha)",
       "description": "Muestra cómo el voltaje de ruptura VBR se desplaza ligeramente con la temperatura. El coeficiente α_BR = 0.001 produce un desplazamiento pequeño pero visible.",
@@ -109,7 +109,7 @@
     },
     {
       "filename": "DIO-curva-zener-01-iv.png",
-      "script": "00-META/tools/DIO-gen-curva-zener.py",
+      "script": "scripts/DIO-gen-curva-zener.py",
       "figure_number": 1,
       "title": "Curva Característica I-V del Diodo Zener",
       "description": "Muestra la curva de corriente vs voltaje enfatizando la región de ruptura Zener donde el voltaje se mantiene constante.",
@@ -124,7 +124,7 @@
     },
     {
       "filename": "DIO-curva-zener-02-zoom.png",
-      "script": "00-META/tools/DIO-gen-curva-zener.py",
+      "script": "scripts/DIO-gen-curva-zener.py",
       "figure_number": 2,
       "title": "Zoom: Región de Bloqueo del Diodo Zener",
       "description": "Ampliación de la zona de polarización inversa antes de la ruptura, mostrando la escala de la corriente de fuga en nanoamperios.",
@@ -139,7 +139,7 @@
     },
     {
       "filename": "DIO-esquema-zener-regulador.png",
-      "script": "00-META/tools/DIO-gen-zener-regulador.py",
+      "script": "scripts/DIO-gen-zener-regulador.py",
       "figure_number": 3,
       "title": "Esquema del Regulador Zener Básico",
       "description": "Diagrama esquemático de un regulador de voltaje en el que el zener está polarizado de manera inversa para la estabilización del voltaje sobre un bloque de carga.",
