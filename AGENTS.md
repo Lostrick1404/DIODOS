@@ -37,6 +37,10 @@ DIODOS-Y-TRANSISTORES/
 │   └── templates/                  → Plantillas para futuros repositorios
 ├── scripts/                        → Herramientas y scripts de automatización (Python)
 │   └── Control_Scripts.md          → Registro centralizado de scripts e imágenes
+├── PRACTICAS/                      → Guías de laboratorio y reportes (PRAC)
+│   ├── PRACTICA_X/                 → Carpeta por práctica
+│   │   ├── media/                  → Imágenes y diagramas
+│   │   └── [herramientas]/         # Scripts de validación o cálculo
 ├── ARQUITECTURE.md                 → Arquitectura, estándares y convenciones (UNIFICADO)
 ├── AUDITORIA.md                    → Historial de auditorías y validaciones (UNIFICADO)
 │
@@ -190,10 +194,10 @@ Set-Location "G:\REPOSITORIOS GITHUB\DIODOS Y TRANSISTORES"
 
 | Campo | Ejemplo |
 |-------|---------|
-| `PREFIJO` | `DIO`, `BJT`, `FET`, `AMP`, `PRO` |
+| `PREFIJO` | `DIO`, `BJT`, `FET`, `AMP`, `PRO`, `PRAC` |
 | `XX` | `01`, `02`, ..., `08` |
 | `Contenido` | `Polarizacion`, `Rectificacion` (PascalCase) |
-| `Tipo` | `Intro`, `Teoria`, `Metodos`, `Problemas`, `Soluciones` |
+| `Tipo` | `Intro`, `Teoria`, `Guia`, `Reporte`, `Problemas`, `Soluciones` |
 
 ### 5.2 Bloque de metadatos obligatorio
 
@@ -319,6 +323,7 @@ Solo se mejora la forma; los valores técnicos se respetan fielmente.
 
 | Versión | Fecha | Cambios |
 |---------|-------|---------|
+| 2.1.0 | 2026-05-06 | Estabilización de PRACTICAS en la raíz, unificación de estándares en ARQUITECTURE.md |
 | 2.0.0 | 2026-03-20 | Reestructuración: topics/, 00-meta/, sistema de auditorías |
 | 1.0.0 | 2026-03-20 | Creación inicial del archivo AGENTS.md |
 

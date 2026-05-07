@@ -1,11 +1,11 @@
 {
-  "title": "Transistor Bipolar (BJT)",
-  "status": "draft",
+  "title": "El Transistor de Unión Bipolar (BJT)",
+  "status": "review",
   "prerequisites": ["01-circuitos-diodos"],
-  "tags": ["BJT", "transistor", "polarización", "emisor común", "base común", "colector común"],
-  "last_updated": "2026-03-20",
+  "tags": ["BJT", "NPN", "PNP", "polarización", "emisor común", "base común", "colector común", "conmutación"],
+  "last_updated": "2026-05-06",
   "modules": {
-    "theory": true,
+    "theory": "review",
     "methods": false,
     "problems": false,
     "solutions": false

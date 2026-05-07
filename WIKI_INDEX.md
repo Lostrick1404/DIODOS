@@ -44,7 +44,7 @@ last_updated: 2026-03-20
 ## Módulo 02: Transistor Bipolar — BJT (`BJT`)
 
 - [Intro](topics/02-transistor-bjt/BJT-00-Intro.md) | [README](topics/02-transistor-bjt/README.md) | [Índice](topics/02-transistor-bjt/00-Index.md)
-- Carpetas: [theory/](topics/02-transistor-bjt/theory/) · [assets/](topics/02-transistor-bjt/assets/)
+- Carpetas: [theory/](topics/02-transistor-bjt/theory/) · [assets/](topics/02-transistor-bjt/assets/) · [formularios/](topics/02-transistor-bjt/formularios/)
 
 | # | Subtema | Archivo de Teoría |
 |---|---------|-------------------|
@@ -54,6 +54,8 @@ last_updated: 2026-03-20
 | 2.2.3 | Polarización en Colector Común | [BJT-04](topics/02-transistor-bjt/theory/BJT-04-Teoria-Polarizacion-Colector-Comun.md) |
 | 2.3 | Conmutación | [BJT-05](topics/02-transistor-bjt/theory/BJT-05-Teoria-Conmutacion.md) |
 | 2.4 | Estabilidad | [BJT-06](topics/02-transistor-bjt/theory/BJT-06-Teoria-Estabilidad.md) |
+
+- **[Formulario de Referencia](topics/02-transistor-bjt/formularios/BJT-00-Formulario-Referencia.md)**
 
 ---
 

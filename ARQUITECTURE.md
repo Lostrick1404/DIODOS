@@ -68,7 +68,24 @@ last_updated: YYYY-MM-DD
 
 ---
 
-## 3. Estándares Técnicos y Directivas de IA
+## 3. Estándares para Prácticas de Laboratorio (`PRACTICAS/`)
+
+Para mantener la consistencia con el "Jardín Digital", cada práctica debe seguir esta organización:
+
+### Estructura de Archivos
+1.  **Guía de Práctica:** `PRAC-[XX]-[Nombre]-Guia.md` (Instrucciones y objetivos).
+2.  **Reporte de Resultados:** `PRAC-[XX]-[Nombre]-Reporte.md` (Cálculos y mediciones).
+3.  **Media:** Subcarpeta `media/` para esquemáticos y fotos de laboratorio.
+4.  **Scripts:** Los scripts de validación (calculadoras) deben residir en la carpeta de la práctica o en `scripts/` si son reutilizables.
+
+### Requisitos de Contenido
+- Todo archivo de práctica debe incluir el bloque `::METADATA::`.
+- Las imágenes deben estar referenciadas con rutas relativas: `![Alt](media/imagen.png)`.
+- Los cálculos matemáticos deben usar **LaTeX**.
+
+---
+
+## 4. Estándares Técnicos y Directivas de IA
 
 ### Notación Matemática (LaTeX)
 *   **Inline:** `$ E = mc^2 $`
