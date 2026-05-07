@@ -15,6 +15,6 @@ Este directorio contiene el script `practica1_calculadora.py`, una herramienta i
 ## 🚀 Uso
 Ejecutar desde la raíz del repositorio:
 ```bash
-python "topics/01-circuitos-diodos/Notas/PRACTICA 1/practica1_calculadora.py"
+python "PRACTICAS/PRACTICA_1/practica1_calculadora.py"
 ```
 *Requiere entorno gráfico (Tkinter).*
