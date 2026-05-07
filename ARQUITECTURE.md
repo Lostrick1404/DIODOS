@@ -14,6 +14,7 @@ El proyecto está organizado como un **Jardín Digital**: modular, interconectad
 DIODOS-Y-TRANSISTORES/
 ├── 00-meta/                # Plantillas (Depreciado a favor de este archivo)
 ├── scripts/                # Scripts de automatización y generación de assets
+├── PRACTICAS/              # Guías de laboratorio y reportes experimentales
 ├── topics/                 # Contenido educativo organizado por módulos
 │   ├── 01-circuitos-diodos/ # Módulo DIO: Teoría y práctica de diodos
 │   ├── 02-transistor-bjt/   # Módulo BJT: Transistores de unión bipolar

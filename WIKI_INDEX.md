@@ -98,6 +98,17 @@ last_updated: 2026-03-20
 
 ---
 
+## 🧪 Prácticas de Laboratorio (`PRACTICAS`)
+
+Guías detalladas, cálculos experimentales y reportes de laboratorio.
+
+*   📂 **[Práctica 1: Rectificación y Filtrado](PRACTICAS/PRACTICA_1/PRACTICA_1.md)**
+    *   🧮 [Calculadora de Validación](PRACTICAS/PRACTICA_1/README_CALCULADORA.md)
+*   📂 **[Práctica 3: Polarización de BJT](PRACTICAS/PRACTICA_3/PRACTICA_3_COMPLETA.md)**
+    *   📄 [Datasheet BC548-B](PRACTICAS/PRACTICA_3/datasheet_BC548-B.md)
+
+---
+
 ## Recursos Globales
 
 | Recurso | Ubicación |
