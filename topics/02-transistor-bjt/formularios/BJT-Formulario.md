@@ -5,7 +5,7 @@ topic_id: bjt-formulario
 file_id: BJT-Formulario
 status: active
 audience: both
-last_updated: 2026-02-07
+last_updated: 2026-05-07
 -->
 
 > 🏠 **Navegación:** [← Módulo 02](../00-Index.md) | [📋 Wiki](../../WIKI_INDEX.md) | [📚 Glosario](../../glossary.md) | [📁 Formularios](./)
@@ -36,11 +36,13 @@ $$\alpha = \frac{\beta}{1 + \beta} \qquad \beta = \frac{\alpha}{1 - \alpha}$$
 
 ### Recta de carga DC
 
-$$V_{CE} = V_{CC} - I_C(R_C + R_E)$$
+$$V_{CE} = V_{CC} - I_C R_C - I_E R_E$$
+
+$$V_{CE} \approx V_{CC} - I_C(R_C + R_E) \quad (I_E \approx I_C,\; \beta \gg 1)$$
 
 **Puntos de intersección:**
 - Eje $V_{CE}$: $I_C = 0 \Rightarrow V_{CE} = V_{CC}$
-- Eje $I_C$: $V_{CE} = 0 \Rightarrow I_C = \frac{V_{CC}}{R_C + R_E}$
+- Eje $I_C$: $V_{CE} = 0 \Rightarrow I_C \approx \frac{V_{CC}}{R_C + R_E}$ (si $I_E \approx I_C$)
 
 ### Transistores BJT comunes
 
@@ -101,11 +103,13 @@ $$V_{CE} = V_{CC} - I_C(R_C + R_E)$$
 
 ### Polarización por realimentación de colector
 
-$$I_B = \frac{V_{CC} - V_{BE}}{R_B + \beta(R_C + R_E)}$$
+$$I_B = \frac{V_{CC} - V_{BE}}{R_B + (\beta + 1)(R_C + R_E)}$$
+
+$$I_B \approx \frac{V_{CC} - V_{BE}}{R_B + \beta(R_C + R_E)} \quad (\beta \gg 1)$$
 
 $$I_C = \beta I_B$$
 
-$$V_{CE} = V_{CC} - I_C R_C - I_B R_B \approx V_{CC} - I_C(R_C + R_E)$$
+$$V_{CE} = V_{CC} - (I_C+I_B)(R_C + R_E) \approx V_{CC} - I_C(R_C + R_E)$$
 
 ---
 
@@ -115,7 +119,9 @@ $$I_E = \frac{V_{EE} - V_{BE}}{R_E}$$
 
 $$I_C = \alpha \, I_E$$
 
-$$V_{CB} = V_{CC} - I_C R_C$$
+$$V_C = V_{CC} - I_C R_C$$
+
+$$V_{CB} = V_C - V_B \quad (\text{si } V_B = 0 \Rightarrow V_{CB} = V_C)$$
 
 | Parámetro | Valor típico |
 |-----------|-------------|
@@ -150,11 +156,13 @@ $$V_{CE} = V_{CC} - I_E R_E$$
 | Estado | Región | $V_{BE}$ | $I_C$ | $V_{CE}$ |
 |--------|--------|---------|-------|---------|
 | OFF (corte) | Corte | $< 0.5$ V | ≈ 0 | $\approx V_{CC}$ |
-| ON (saturación) | Saturación | ≈ 0.8 V | $V_{CC}/(R_C + R_E)$ | $V_{CE(sat)} \approx 0.2$ V |
+| ON (saturación) | Saturación | ≈ 0.8 V | $(V_{CC}-V_{CE(sat)})/(R_C + R_E)$ | $V_{CE(sat)} \approx 0.2$ V |
 
 ### Resistencia mínima de base para saturación
 
-$$I_{B(sat)} = \frac{I_{C(sat)}}{\beta} = \frac{V_{CC} - V_{CE(sat)}}{\beta(R_C + R_E)}$$
+$$I_{C(sat)} \approx \frac{V_{CC} - V_{CE(sat)}}{R_C + R_E}$$
+
+$$I_{B(sat)} = \frac{I_{C(sat)}}{\beta} \approx \frac{V_{CC} - V_{CE(sat)}}{\beta(R_C + R_E)}$$
 
 $$R_{B(max)} = \frac{V_{CC} - V_{BE(sat)}}{I_{B(sat)}}$$
 
@@ -193,7 +201,7 @@ $$\Delta I_C = S(I_{CO})\Delta I_{CO} + S(\beta)\Delta\beta + S(V_{BE})\Delta V_
 |---------------|------------|-----------|------------|-------------|
 | Polarización fija | $\beta + 1$ | $I_{C1}/\beta_1$ | $-\beta/R_B$ | ❌ Mala |
 | Con $R_E$ | $\frac{\beta+1}{1+\beta R_E/(R_B+R_E)}$ | — | — | ⚠️ Regular |
-| Divisor de voltaje | $\frac{(\beta+1)(1+R_{th}/R_E)}{(\beta+1)+R_{th}/R_E}$ | $\frac{I_{C1}(\beta_2-\beta_1)}{\beta_2(\beta_1+\frac{R_{th}}{R_E}+1)}$ | $\frac{-\beta}{R_{th}+(\beta+1)R_E}$ | ✅ Buena |
+| Divisor de voltaje | $\frac{(\beta+1)(1+R_{th}/R_E)}{(\beta+1)+R_{th}/R_E}$ | $\frac{(V_{th}-V_{BE})(R_{th}+R_E)}{(R_{th}+(\beta+1)R_E)^2}$ | $\frac{-\beta}{R_{th}+(\beta+1)R_E}$ | ✅ Buena |
 | Realimentación colector | $\frac{\beta+1}{1+\beta R_C/R_B}$ | — | — | ⚠️ Regular |
 
 > **Regla práctica:** $S(I_{CO})$ ideal = 1 (inalcanzable). Valores $< 10$ se consideran aceptables.
