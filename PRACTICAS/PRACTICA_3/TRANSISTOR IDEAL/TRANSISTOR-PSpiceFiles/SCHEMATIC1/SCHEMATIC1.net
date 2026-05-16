@@ -1,0 +1,6 @@
+* source TRANSISTOR
+Q_Q1         N14400 N15041 N14419 BC548B_Mod 
+R_Rc         N14400 N14429  120 TC=0,0 
+R_Re         0 N14419  29.85 TC=0,0 
+V_V1         N14429 0 15Vdc
+I_I1         0 N15041 DC 100uAdc  
