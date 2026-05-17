@@ -1,0 +1,120 @@
+
+**** 05/17/26 16:59:33 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "BETA_TYP-SIM-TYP"  [ C:\ESCRITORIO LAPTOP\6 Semestre\DIODOS Y TRANSISTORES\TRANSISTOR IDEAL\TRANSISTOR-PSpiceFiles\BETA
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "SIM-TYP.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../transistor-pspicefiles/transistor_bc548b_typ.lib" 
+* From [PSPICE NETLIST] section of C:\Users\jesus\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.DC LIN V_V1 0 15 0.01 
+.OPTIONS ADVCONV
+.PROBE64 V(*) I(*) W(*) D(alias(*)) NOISE(alias(*)) 
+.INC "..\BETA_TYP.net" 
+
+
+
+**** INCLUDING BETA_TYP.net ****
+* source TRANSISTOR
+R_Re         0 N14419  30 TC=0,0 
+R_R2         0 N15426  1k TC=0,0 
+R_Rc         N14400 N14429  120 TC=0,0 
+R_R1         N15426 N14429  5.6k TC=0,0 
+Q_Q1         N14400 N15426 N14419 BC548B_290 
+V_V1         N14429 0 15Vdc
+
+**** RESUMING SIM-TYP.cir ****
+.END
+
+INFO(ORPSIM-15423): Unable to find index file transistor_bc548b_typ.ind for library file transistor_bc548b_typ.lib.
+
+INFO(ORPSIM-15422): Making new index file transistor_bc548b_typ.ind for library file transistor_bc548b_typ.lib.
+
+Index has 1 entries from 1 file(s).
+
+**** 05/17/26 16:59:33 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "BETA_TYP-SIM-TYP"  [ C:\ESCRITORIO LAPTOP\6 Semestre\DIODOS Y TRANSISTORES\TRANSISTOR IDEAL\TRANSISTOR-PSpiceFiles\BETA
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               BC548B_290      
+               NPN             
+       LEVEL    1            
+          IS    7.049000E-15 
+          BF  290            
+          NF    1            
+         VAF   62.79         
+         IKF     .08157      
+         ISE   68.000000E-15 
+          NE    1.576        
+          BR    1            
+          NR    1            
+         IKR    3.924        
+         ISC   12.400000E-15 
+          NC    1.835        
+          NK     .4767       
+         ISS    0            
+          RE    0            
+          RC     .9747       
+         CJE   11.500000E-12 
+         VJE     .5          
+         MJE     .6715       
+         CJC    5.250000E-12 
+         VJC     .5697       
+         MJC     .3147       
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          TF  410.200000E-12 
+         XTF   40.06         
+         VTF   10            
+         ITF    1.491        
+          TR   10.000000E-09 
+         XTB    1.5          
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+
+          JOB CONCLUDED
+
+**** 05/17/26 16:59:33 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "BETA_TYP-SIM-TYP"  [ C:\ESCRITORIO LAPTOP\6 Semestre\DIODOS Y TRANSISTORES\TRANSISTOR IDEAL\TRANSISTOR-PSpiceFiles\BETA
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .80
+

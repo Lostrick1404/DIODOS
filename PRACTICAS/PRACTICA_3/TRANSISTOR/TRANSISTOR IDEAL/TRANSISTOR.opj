@@ -1,0 +1,139 @@
+(ExpressProject "TRANSISTOR"
+  (ProjectVersion "19981106")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library"
+      (File "C:\Cadence\SPB_17.2\tools\capture\library\pspice\analog.olb"
+        (DisplayName
+           "C:\Cadence\SPB_17.2\tools\capture\library\pspice\analog.olb")
+        (Type "Schematic Library"))
+      (File "C:\Cadence\SPB_17.2\tools\capture\library\pspice\breakout.olb"
+        (DisplayName
+           "C:\Cadence\SPB_17.2\tools\capture\library\pspice\breakout.olb")
+        (Type "Schematic Library"))
+      (File "C:\Cadence\SPB_17.2\tools\capture\library\pspice\source.olb"
+        (DisplayName
+           "C:\Cadence\SPB_17.2\tools\capture\library\pspice\source.olb")
+        (Type "Schematic Library"))
+      (File "C:\Cadence\SPB_17.2\tools\capture\library\pspice\sourcstm.olb"
+        (DisplayName
+           "C:\Cadence\SPB_17.2\tools\capture\library\pspice\sourcstm.olb")
+        (Type "Schematic Library"))
+      (File "C:\Cadence\SPB_17.2\tools\capture\library\pspice\special.olb"
+        (DisplayName
+           "C:\Cadence\SPB_17.2\tools\capture\library\pspice\special.olb")
+        (Type "Schematic Library")))
+    (NoModify)
+    (File "transistor.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (ANNOTATE_Scope "0")
+    (ANNOTATE_Mode "1")
+    (ANNOTATE_Action "1")
+    (ANNOTATE_Reset_References_to_1 "FALSE")
+    (ANNOTATE_No_Page_Number_Change "TRUE")
+    (ANNOTATE_Property_Combine "{Value}{Source Package}")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE")
+    (RootChangedForceReNetlist "x"))
+  (Folder "Outputs"
+    (File ".\transistor-pspicefiles\schematic1\schematic1.net"
+      (Type "Report"))
+    (File ".\transistor-pspicefiles\beta_min\beta_min.net"
+      (Type "Report"))
+    (File ".\transistor-pspicefiles\beta_typ\beta_typ.net"
+      (Type "Report")))
+  (Folder "PSpice Resources"
+    (Folder "Model Libraries"
+      (Sort User)
+      (File ".\transistor-pspicefiles\transistor_bc548b_typ.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName ".\transistor-pspicefiles\transistor_bc548b_typ.lib")))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User))
+    (Folder "Simulation Profiles"
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\transistor-pspicefiles\beta_min\sim-ideal.sim"
+        (DisplayName "BETA_MIN-SIM-IDEAL")
+        (Type "PSpice Profile"))
+      (ActiveProfile ".\transistor-pspicefiles\beta_typ\sim-typ.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\transistor-pspicefiles\beta_typ\sim-typ.sim"
+        (DisplayName "BETA_TYP-SIM-TYP")
+        (Type "PSpice Profile"))))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (PartMRUSelector
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (0
+      (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (IDC
+      (FullPartName "IDC.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (VDC
+      (FullPartName "VDC.Normal")
+      (LibraryName "G:\6TO SEMESTRE\DIODOS Y TRANSISTORES\BASICOS.OLB")
+      (DeviceIndex "0"))
+    (BC548B
+      (FullPartName "BC548B.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\PSPICE\EBIPOLAR.OLB")
+      (DeviceIndex "0"))
+    (C
+      (FullPartName "C.Normal")
+      (LibraryName "..\..\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (L
+      (FullPartName "L.Normal")
+      (LibraryName "..\..\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (VSTIM
+      (FullPartName "VSTIM.Normal")
+      (LibraryName "..\..\LIBRARY\PSPICE\SOURCSTM.OLB")
+      (DeviceIndex "0")))
+  (LastUsedLibraryBrowseDirectory "C:\Cadence\SPB_17.2\tools\capture\library")
+  (MPSSessionName "jesus")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "C:\ESCRITORIO LAPTOP\6 Semestre\DIODOS Y TRANSISTORES\TRANSISTOR IDEAL\transistor.dsn")
+      (Path "Design Resources"
+         "C:\ESCRITORIO LAPTOP\6 Semestre\DIODOS Y TRANSISTORES\TRANSISTOR IDEAL\transistor.dsn"
+         "BETA_TYP")
+      (Path "Design Resources"
+         "C:\ESCRITORIO LAPTOP\6 Semestre\DIODOS Y TRANSISTORES\TRANSISTOR IDEAL\transistor.dsn"
+         "BETA_MAX")
+      (Path "Design Resources"
+         "C:\ESCRITORIO LAPTOP\6 Semestre\DIODOS Y TRANSISTORES\TRANSISTOR IDEAL\transistor.dsn"
+         "BETA_MIN")
+      (Path "Design Resources" "Library")
+      (Path "Outputs")
+      (Path "PSpice Resources")
+      (Path "PSpice Resources" "Model Libraries")
+      (Path "PSpice Resources" "Simulation Profiles"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 0 200 0 394"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -31 130 1290 130 455")
+        (Scroll "-144 20")
+        (Zoom "100")
+        (Occurrence "/"))
+      (Path
+         "C:\ESCRITORIO LAPTOP\6 SEMESTRE\DIODOS Y TRANSISTORES\TRANSISTOR IDEAL\TRANSISTOR.DSN")
+      (Schematic "BETA_TYP")
+      (Page "BETA_290"))))

@@ -1,0 +1,48 @@
+
+**** 05/16/26 14:47:29 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Curvas_Salida"  [ G:\6TO SEMESTRE\DIODOS Y TRANSISTORES\TRANSISTOR-PSpiceFiles\SCHEMATIC1\Curvas_Salida.sim 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Curvas_Salida.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../transistor-pspicefiles/transistor_bc548b.lib" 
+* From [PSPICE NETLIST] section of C:\Users\jesus\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.DC LIN V_V1 0V 15V 0.01V 
++ LIN I1 50u 400u 50u 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source TRANSISTOR
+Q_Q1         N14400 N14404 N14419 BC548B_Mod 
+R_R1         N14404 N14423  4654.5 TC=0,0 
+R_R2         0 N14404  880 TC=0,0 
+R_Rc         N14400 N14423  120 TC=0,0 
+R_Re         0 N14419  29.85 TC=0,0 
+V_V1         N14423 0 15Vdc
+
+**** RESUMING Curvas_Salida.cir ****
+.END
+
+
+ERROR(ORPSIM-15090): DC device I1 is undefined
+

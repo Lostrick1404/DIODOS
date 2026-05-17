@@ -1,0 +1,19 @@
+** Profile: "SCHEMATIC1-Punto-Q"  [ G:\6TO SEMESTRE\DIODOS Y TRANSISTORES\TRANSISTOR-PSpiceFiles\SCHEMATIC1\Punto-Q.sim ] 
+
+** Creating circuit file "Punto-Q.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../transistor-pspicefiles/transistor_bc548b.lib" 
+* From [PSPICE NETLIST] section of C:\Users\jesus\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END

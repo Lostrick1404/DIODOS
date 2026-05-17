@@ -1,0 +1,7 @@
+* source TRANSISTOR
+R_Re         0 N14419  30 TC=0,0 
+R_R2         0 N15426  1k TC=0,0 
+R_Rc         N14400 N14429  120 TC=0,0 
+R_R1         N15426 N14429  5.6k TC=0,0 
+Q_Q1         N14400 N15426 N14419 BC548B_290 
+V_V1         N14429 0 15Vdc

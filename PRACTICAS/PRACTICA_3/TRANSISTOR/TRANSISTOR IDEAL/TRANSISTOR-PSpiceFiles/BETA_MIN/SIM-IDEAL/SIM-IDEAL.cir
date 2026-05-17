@@ -1,0 +1,20 @@
+** Profile: "beta_min-SIM-IDEAL"  [ C:\ESCRITORIO LAPTOP\6 Semestre\DIODOS Y TRANSISTORES\TRANSISTOR IDEAL\TRANSISTOR-PSpiceFiles\BETA_MIN\SIM-IDEAL.sim ] 
+
+** Creating circuit file "sim-ideal.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../transistor-pspicefiles/transistor_bc548b_min.lib" 
+* From [PSPICE NETLIST] section of C:\Users\jesus\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.DC LIN V_V1 0 15 0.01 
+.OPTIONS ADVCONV
+.PROBE64 V(*) I(*) W(*) D(alias(*)) NOISE(alias(*)) 
+.INC "..\beta_min.net" 
+
+
+.END
