@@ -510,6 +510,26 @@ last_updated: 2026-04-29
 
 ---
 
+## Prácticas — Generadores locales
+
+> Registro local para trazabilidad de scripts ubicados junto a su práctica. No se incluye en el conteo de módulos del resumen.
+
+### PRACTICA_4/PRAC-04-gen-curvas-transferencia.py
+
+| Campo | Valor |
+|-------|-------|
+| **Script** | `PRACTICAS/PRACTICA_4/PRAC-04-gen-curvas-transferencia.py` |
+| **Módulo** | `PRAC` — Práctica 4 |
+| **Descripción** | Curvas de transferencia JFET 2N5457 con punto Q teórico y comercial |
+| **Salida** | `PRACTICAS/PRACTICA_4/assets/` |
+
+| Imagen generada | Ruta | Referenciada en |
+|----------------|------|-----------------|
+| `PRAC-04-curvas-transferencia-teorica.png` | `PRACTICAS/PRACTICA_4/assets/` | [PRACTICAS/PRACTICA_4/Calculos.md](../PRACTICAS/PRACTICA_4/Calculos.md) |
+| `PRAC-04-curvas-transferencia-comercial.png` | `PRACTICAS/PRACTICA_4/assets/` | [PRACTICAS/PRACTICA_4/Calculos.md](../PRACTICAS/PRACTICA_4/Calculos.md) |
+
+---
+
 ## Resumen
 
 | Módulo | Scripts | Imágenes | Con referencia | Sin referencia |
