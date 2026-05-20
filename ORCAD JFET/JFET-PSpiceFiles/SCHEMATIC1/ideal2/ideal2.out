@@ -1,0 +1,121 @@
+
+**** 05/20/26 16:17:20 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-ideal2"  [ C:\Users\josue\OneDrive\Documentos\ORCAD JFET\JFET-PSpiceFiles\SCHEMATIC1\ideal2.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "ideal2.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\josue\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 1000ns 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source JFET
+R_R1         N14408 N14433  68k TC=0,0 
+R_R2         0 N14408  47k TC=0,0 
+R_R3         N14929 N14433  340 TC=0,0 
+R_R4         0 N14925  2k TC=0,0 
+J_J1         N14929 N14408 N14925 J2N5457 
+V_V1         N14433 0 15Vdc
+
+**** RESUMING ideal2.cir ****
+.END
+
+**** 05/20/26 16:17:20 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-ideal2"  [ C:\Users\josue\OneDrive\Documentos\ORCAD JFET\JFET-PSpiceFiles\SCHEMATIC1\ideal2.sim ] 
+
+
+ ****     Junction FET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               J2N5457         
+               NJF             
+         VTO   -1.372        
+        BETA    1.125000E-03 
+      LAMBDA    2.300000E-03 
+          IS  181.300000E-15 
+         ISR    1.747000E-12 
+       ALPHA    2.543000E-06 
+          VK  152.2          
+          RD    1            
+          RS    1            
+         CGD    4.000000E-12 
+         CGS    4.627000E-12 
+           M     .3114       
+          PB     .5          
+       VTOTC   -2.500000E-03 
+     BETATCE    -.5          
+          KF   10.450000E-18 
+
+
+**** 05/20/26 16:17:20 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-ideal2"  [ C:\Users\josue\OneDrive\Documentos\ORCAD JFET\JFET-PSpiceFiles\SCHEMATIC1\ideal2.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N14408)    6.1304 (N14433)   15.0000 (N14925)    5.8956 (N14929)   13.9980 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -3.078E-03
+
+    TOTAL POWER DISSIPATION   4.62E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 05/20/26 16:17:20 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-ideal2"  [ C:\Users\josue\OneDrive\Documentos\ORCAD JFET\JFET-PSpiceFiles\SCHEMATIC1\ideal2.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .06
+

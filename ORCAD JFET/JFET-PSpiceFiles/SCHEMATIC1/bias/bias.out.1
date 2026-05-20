@@ -1,0 +1,126 @@
+
+**** 05/20/26 11:45:01 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ C:\Users\josue\OneDrive\Documentos\ORCAD JFET\jfet-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bias.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\josue\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source JFET
+R_R1         N14406 N14433  1M TC=0,0 
+R_R2         0 N14406  10k TC=0,0 
+R_R3         N14402 N14433  2.2k TC=0,0 
+R_R4         0 N14398  180 TC=0,0 
+J_J1         N14402 N14406 N14398 J2N5457 
+V_V1         N14433 0 15Vdc
+
+**** RESUMING bias.cir ****
+.END
+
+INFO(ORPSIM-15423): Unable to find index file nomd.ind for library file nomd.lib.
+
+INFO(ORPSIM-15422): Making new index file nomd.ind for library file nomd.lib.
+
+Index has 34104 entries from 205 file(s).
+
+**** 05/20/26 11:45:01 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ C:\Users\josue\OneDrive\Documentos\ORCAD JFET\jfet-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     Junction FET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               J2N5457         
+               NJF             
+         VTO   -1.372        
+        BETA    1.125000E-03 
+      LAMBDA    2.300000E-03 
+          IS  181.300000E-15 
+         ISR    1.747000E-12 
+       ALPHA    2.543000E-06 
+          VK  152.2          
+          RD    1            
+          RS    1            
+         CGD    4.000000E-12 
+         CGS    4.627000E-12 
+           M     .3114       
+          PB     .5          
+       VTOTC   -2.500000E-03 
+     BETATCE    -.5          
+          KF   10.450000E-18 
+
+
+**** 05/20/26 11:45:01 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ C:\Users\josue\OneDrive\Documentos\ORCAD JFET\jfet-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N14398)   14.2280 (N14402)   14.4460 (N14406)   15.0000 (N14433)   15.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -8.054E-02
+
+    TOTAL POWER DISSIPATION   1.21E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 05/20/26 11:45:01 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ C:\Users\josue\OneDrive\Documentos\ORCAD JFET\jfet-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        2.13
+
